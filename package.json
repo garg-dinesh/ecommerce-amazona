@@ -1,0 +1,29 @@
+{
+  "name": "amazona",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dineshGargCreole/ecommerce-amazona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dineshGargCreole/ecommerce-amazona/issues"
+  },
+  "homepage": "https://github.com/dineshGargCreole/ecommerce-amazona#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-plugin-react": "^7.29.4",
+    "nodemon": "^2.0.15"
+  }
+}
