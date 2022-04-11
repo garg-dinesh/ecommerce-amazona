@@ -20,7 +20,6 @@ export default function ProductScreen(props) {
     },[id, dispatch])
 
     const addToCartHandler = () => {
-        console.log('url', `/cart/${id}?qty=${qty}`)
         navigate(`/cart/${id}/${qty}`);
     }
 
