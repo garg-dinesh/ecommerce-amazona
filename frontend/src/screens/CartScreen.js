@@ -1,13 +1,13 @@
 import React, {useEffect} from 'react'
-import {useParams, Link, useNavigate} from 'react-router-dom';
+import {Link, useNavigate, useLocation} from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import {useDispatch, useSelector} from 'react-redux';
 import MessageBox from '../components/MessageBox';
 
-export default function CartScreen(props) {
-    const {id, qty} = useParams();
-    // const qty = props.location.search
-    //     ? Number(props.location.search.split('=')[1]) : 1;
+export default function CartScreen() {
+    const location = useLocation();
+    const id = location.search.split('=')[0].slice(1);
+    const qty = location.search.split('=')[1];
     const cart = useSelector(state => state.cart);
     const {cartItems} = cart;
     const dispatch = useDispatch();

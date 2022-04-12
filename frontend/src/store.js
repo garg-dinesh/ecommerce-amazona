@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import { productListReducer, productDetailsReducer } from './reducers/productReducers';
 import { cartReducer } from './reducers/cartReducers';
 import {userSigninReducer, userRegisterReducer} from './reducers/userReducers';
+import {orderCreateReducer, orderDetailsReducer} from './reducers/orderReducers';
 
 const initialState = {
     userSignin: {
@@ -17,6 +18,7 @@ const initialState = {
         shippingAddress: localStorage.getItem('shippingAddress')
             ? JSON.parse(localStorage.getItem('shippingAddress'))
             : {},
+        paymentMethod: 'PayPal',
     }
 };
 const reducer = combineReducers({
@@ -25,6 +27,8 @@ const reducer = combineReducers({
     cart: cartReducer,
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
+    orderCreate: orderCreateReducer,
+    orderDetails: orderDetailsReducer,
 })
 
 
