@@ -20,7 +20,7 @@ export default function ProductScreen(props) {
     },[id, dispatch])
 
     const addToCartHandler = () => {
-        navigate(`/cart/${id}/${qty}`);
+        navigate(`/cart?${id}=${qty}`);
     }
 
   return (
